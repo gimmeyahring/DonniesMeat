@@ -30,10 +30,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 username = enterUsername.getText().toString();
-                Intent leaveIntent;
-                leaveIntent = new Intent(MainActivity.this, MenuActivity.class);
-                leaveIntent.putExtra("usernameExtra", username);
-                startActivity(leaveIntent);
+                if (username.length() > 13) {
+                    Toast.makeText(MainActivity.this, "Username cant exceed 13 characters", Toast.LENGTH_LONG).show();
+                    username = "";
+                    enterUsername.setText(username);
+                }
+                else {
+                    Intent leaveIntent;
+                    leaveIntent = new Intent(MainActivity.this, MenuActivity.class);
+                    leaveIntent.putExtra("usernameExtra", username);
+                    startActivity(leaveIntent);
+                }
+
             }
         });
 

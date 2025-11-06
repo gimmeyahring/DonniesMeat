@@ -2,5 +2,6 @@
     <string name="app_name">Donnies Meats</string>
     <string name="username_edittext">ENTER A USERNAME</string>
     <string name="donebutton">Done</string>
+    <string name="chartxt">No more than 12 characters!!!</string>
 
 </resources>
