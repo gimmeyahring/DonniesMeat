@@ -12,10 +12,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DonniesMeatsYeah">
         <activity
+            android:name=".SandwichActivity"
+            android:exported="false" />
+        <activity
             android:name=".MenuActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

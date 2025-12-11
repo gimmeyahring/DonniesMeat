@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="top"
+    android:background="@color/red"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25sp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pick from our variety of meats which include:\nChicken, Ham, and Turkey\n\nYou can also pair it with Toppings/Sause which include:\nMayo, Cheese, and Pickles"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:gravity="center"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20sp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/meatRGRP">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chicken"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/red"
+            android:shadowColor="@color/red"
+            android:id="@+id/chickenbut"/>
+        <View
+            android:layout_width="25sp"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ham"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/red"
+            android:shadowColor="@color/red"
+            android:id="@+id/hambut"/>
+        <View
+            android:layout_width="25sp"
+            android:layout_height="match_parent"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turkey"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textColorHighlight="@color/red"
+            android:shadowColor="@color/red"
+            android:id="@+id/turkeybut"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/minusBTN"
+            android:textSize="25sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="40sp"
+            android:textColor="@color/white"
+            android:id="@+id/quantityTV"
+            android:inputType="number"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:id="@+id/plusBTN"
+            android:textSize="25sp"
+            />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:id="@+id/addOrderBTN"
+        android:text="ADD TO ORDER"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subtotal: $0"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:id="@+id/subtotalTV"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:text="SUBMIT"
+        android:id="@+id/submitBTN"/>
+
+
+
+
+</LinearLayout>

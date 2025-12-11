@@ -1,5 +1,6 @@
 package org.baltimorecityschools.donniesmeatsyeah;
 
+import android.content.SharedPreferences;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,8 +16,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
+
+    final  String sharedPreferencesFile = "org.baltimorecityschools.donavansharepreferences.sp";
+    final String USERNAME_KEY = "USERNAMESAVE";
+
     String username;
     TextView usertxt;
+    Button sandwichBTN;
 
 
     @Override
@@ -26,7 +32,21 @@ public class MenuActivity extends AppCompatActivity {
         Intent intent1 = getIntent();
         username = intent1.getStringExtra("usernameExtra");
         usertxt = (TextView) findViewById(R.id.usernametext);
-        usertxt.setText(String.valueOf(username));
+        usertxt.setText(username);
+        sandwichBTN = findViewById(R.id.sandwichbut);
+
+        sandwichBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent leaveIntent;
+                leaveIntent = new Intent(MenuActivity.this, SandwichActivity.class);
+                startActivity(leaveIntent);
+            }
+        });
 
     }
+
+
+
+    
 }

@@ -1,5 +1,7 @@
 package org.baltimorecityschools.donniesmeatsyeah;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -15,9 +17,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
+    SharedPreferences openPreference;
+    final  String sharedPreferencesFile = "org.baltimorecityschools.donavansharepreferences.sp";
+    final String FIRST_OPEN_KEY = "FIRSTOPEN";
+
     Button doneBTN;
     EditText enterUsername;
     String username;
+    View mainview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +32,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         enterUsername = (EditText) findViewById(R.id.setUsername);
         doneBTN = (Button) findViewById(R.id.donebut);
+        mainview = findViewById(R.id.viewid);
+        openPreference = getSharedPreferences(sharedPreferencesFile, MODE_PRIVATE);
+        if (openPreference.getBoolean(FIRST_OPEN_KEY, true)){
+            enterUsername.setVisibility(View.VISIBLE);
+            SharedPreferences.Editor editor = openPreference.edit();
+            editor.putBoolean(FIRST_OPEN_KEY, false);
+            editor.apply();
+
+
+        }
+        else {
+            enterUsername.setVisibility(View.GONE);
+            doneBTN.setText("START");
+
+        }
 
         doneBTN.setOnClickListener(new View.OnClickListener() {
             @Override
