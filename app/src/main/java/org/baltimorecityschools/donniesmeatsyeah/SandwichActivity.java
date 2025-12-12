@@ -68,10 +68,10 @@ public class SandwichActivity extends AppCompatActivity {
 
                 Sandwich sandwich1 = new Sandwich(meattype,"barbecu", false, false, quantity);
                 subtotal += sandwich1.getPrice();
-                tax += subtotal * 0.06;
+                tax = subtotal * 0.06;
                 subtotaltextview.setText("Subtotal: $" + subtotal);
                 taxtextview.setText("Tax: $" + tax);
-                total += tax + subtotal;
+                total = tax + subtotal;
                 totaltextview.setText("Total: $" + total);
 
                 Log.d("Order Has Been Created", sandwich1.toString());
