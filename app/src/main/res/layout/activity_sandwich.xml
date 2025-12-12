@@ -107,8 +107,23 @@
         android:layout_height="wrap_content"
         android:text="Subtotal: $0"
         android:textColor="@color/white"
-        android:textSize="50sp"
+        android:textSize="20sp"
         android:id="@+id/subtotalTV"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tax: $0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:id="@+id/taxTV"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total: $0"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:id="@+id/totalTV"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
