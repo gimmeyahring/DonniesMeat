@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button doneBTN;
     EditText enterUsername;
     String username;
-    View mainview;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         enterUsername = (EditText) findViewById(R.id.setUsername);
         doneBTN = (Button) findViewById(R.id.donebut);
-        mainview = findViewById(R.id.viewid);
+
         openPreference = getSharedPreferences(sharedPreferencesFile, MODE_PRIVATE);
         if (openPreference.getBoolean(FIRST_OPEN_KEY, true)){
             enterUsername.setVisibility(View.VISIBLE);

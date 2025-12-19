@@ -37,6 +37,7 @@ public class SandwichActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sandwich);
+        Intent intent = getIntent();
         quantity = 1;
         meatgroup = findViewById(R.id.meatRGRP);
         chickenbutton = findViewById(R.id.chickenbut);
